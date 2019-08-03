@@ -1,8 +1,3 @@
-var winsHTML = $("#wins");
-var lossesHTML = $("#losses");
-var targetHTML = $("#target");
-var scoreHTML = $("#score");
-
 var gameObject = {
     wins: 0,
     losses: 0,
@@ -15,8 +10,8 @@ var gameObject = {
     initialize: function () {
         this.randomizeValues();
         this.score = 0;
-        scoreHTML.text(this.score);
-        targetHTML.text(this.target);
+        $("#score").text(this.score);
+        $("#target").text(this.target);
     },
     randomizeValues: function () {
         this.target = this.randomNum(30, 100);
@@ -33,13 +28,13 @@ var gameObject = {
     checkScore: function() {
         if (gameObject.score === gameObject.target) {
             this.wins++;
-            winsHTML.text(this.wins);
+            $("#wins").text(this.wins);
             $("#won").text("You Win!");
             $(".wins-losses").css("background-color", "green");
             this.initialize();
         } else if (gameObject.score > gameObject.target) {
             this.losses++;
-            lossesHTML.text(this.losses);
+            $("#losses").text(this.losses);
             $("#won").text("You Lose!");
             $(".wins-losses").css("background-color", "red");
             this.initialize();
@@ -53,22 +48,22 @@ window.onload = function () {
 
     $("#blue-crystal").click(function () {
         gameObject.score += gameObject.blueValue;
-        scoreHTML.text(gameObject.score);
+        $("#score").text(gameObject.score);
         gameObject.checkScore();
     });
     $("#red-crystal").click(function () {
         gameObject.score += gameObject.redValue;
-        scoreHTML.text(gameObject.score);
+        $("#score").text(gameObject.score);
         gameObject.checkScore();
     });
     $("#white-crystal").click(function () {
         gameObject.score += gameObject.whiteValue;
-        scoreHTML.text(gameObject.score);
+        $("#score").text(gameObject.score);
         gameObject.checkScore();
     });
     $("#orange-crystal").click(function () {
         gameObject.score += gameObject.orangeValue;
-        scoreHTML.text(gameObject.score);
+        $("#score").text(gameObject.score);
         gameObject.checkScore();
     });
 
