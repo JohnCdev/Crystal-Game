@@ -14,11 +14,11 @@ var gameObject = {
         $("#target").text(this.target);
     },
     randomizeValues: function () {
-        this.target = this.randomNum(30, 100);
-        this.blueValue = this.randomNum(1, 11);
-        this.redValue = this.randomNum(1, 11);
-        this.whiteValue = this.randomNum(1, 11);
-        this.orangeValue = this.randomNum(1, 11);
+        this.target = this.randomNum(19, 121);
+        this.blueValue = this.randomNum(1, 13);
+        this.redValue = this.randomNum(1, 13);
+        this.whiteValue = this.randomNum(1, 13);
+        this.orangeValue = this.randomNum(1, 13);
     },
     randomNum: function (min, max) {
         min = Math.ceil(min);
