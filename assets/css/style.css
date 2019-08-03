@@ -1,0 +1,78 @@
+body {
+    background-image: url(../images/background.png);
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+.container {
+    margin: 10px;
+}
+
+.title {
+    width: 300px;
+    background-color: orange;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    padding: 25px 0;
+    margin-bottom: 10px;
+}
+
+.instructions {
+    background-color: wheat;
+    color: green;
+    width: 60%;
+    min-height: 300px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.target-container {
+    background-color: forestgreen;
+    color: brown;
+    font-size: 40px;
+    height: 100px;
+    width: 200px;
+    margin-bottom: 10px;
+    float: left;
+    margin-right: 10px;
+    padding: 10px;
+}
+
+.wins-losses {
+    background-color: aqua;
+    height: 90px;
+    width: 100px;
+    float: left;
+    padding: 10px;
+    padding-top:20px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+p {
+    padding-bottom: 10px;
+}
+
+.images-container {
+    clear: both;
+}
+
+img {
+    float: left;
+    height: 150px;
+}
+
+.score-container {
+    background-color: turquoise;
+    color: brown;
+    font-size: 30px;
+    width: 300px;
+    height: 100px;
+    clear: both;
+    padding: 10px;
+}
